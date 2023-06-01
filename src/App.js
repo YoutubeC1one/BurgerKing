@@ -1,13 +1,11 @@
 import './globalStyle.css';
-import * as S from './AppCss.js'
+import Header from './components/Header'
 
 function App() {
   return (
-    <div className="App">
-      <S.HeaderWrapper>
-        sdfsdf
-      </S.HeaderWrapper>
-    </div>
+    <>
+      <Header />
+    </>
   );
 }
 
