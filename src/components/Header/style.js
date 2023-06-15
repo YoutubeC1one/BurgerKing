@@ -103,17 +103,19 @@ export const Menu = styled.div`
   display: flex;
   flex-direction: column;
   align-items: left;
-  width: 175px;
+  width: 170px;
   height: 320px;
   font-size: 15px;
+  background-color: blue;
 `
 export const Menu1 = styled.div`
   display: flex;
   flex-direction: column;
   align-items: left;
-  width: 195px;
+  width: 185px;
   height: 320px;
   font-size: 15px;
+  background-color: red;
 `
 export const Menu2 = styled.div`
   display: flex;
