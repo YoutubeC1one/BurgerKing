@@ -87,7 +87,7 @@ export const DropDown = styled.div`
   top: 120px;
   background-color: white;
   box-shadow: 0.5px 1.5px 1.5px 0.7px #dfdfdf;
-  z-index: 3;
+  z-index: 999;
 `
 export const DropDownLilst = styled.div`
   margin: 0 auto;
