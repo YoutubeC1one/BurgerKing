@@ -9,6 +9,7 @@ export const Container = styled.div`
   justify-content: center;
   font-family: "BMJUA";
   position: fixed;
+  z-index: 3;
 `
 export const Header = styled.div`
   width: 80%;

@@ -67,14 +67,36 @@ export default function MainPage() {
             <S.SnsList>
                 <S.SnsItem> 
                     <img src={snsYoutube} />
-                    ddddd
+                    <S.SnsItem_>
+                        <S.RoundedFont>
+                            YOUTUBE
+                        </S.RoundedFont>
+                        <S.SnsItemButton>
+                            구독
+                        </S.SnsItemButton>
+                    </S.SnsItem_>
                 </S.SnsItem>
                 <S.SnsItem> 
                     <img src={snsF} />
-                    ddd
+                    <S.SnsItem_>
+                        <S.RoundedFont>
+                            FACEBOOK
+                        </S.RoundedFont>
+                        <S.SnsItemButton>
+                            좋아요
+                        </S.SnsItemButton>
+                    </S.SnsItem_>
                 </S.SnsItem>
                 <S.SnsItem> 
                     <img src={snsI} />
+                    <S.SnsItem_>
+                        <S.RoundedFont>
+                            INSTAGRAM
+                        </S.RoundedFont>
+                        <S.SnsItemButton>
+                            팔로워
+                        </S.SnsItemButton>
+                    </S.SnsItem_>
                 </S.SnsItem>
             </S.SnsList>
         </S.MainSnsDiv>
