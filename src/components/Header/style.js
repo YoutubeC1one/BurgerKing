@@ -35,6 +35,7 @@ export const Buttons = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-left: 20px;
 `
 export const MainIcon = styled.img`
   width: 83px;
@@ -138,4 +139,3 @@ export const HeaderFont = styled.div`
 	src: url('./fonts/BMJUA_ttf.ttf');
 }
 `
-

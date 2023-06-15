@@ -1,12 +1,12 @@
 import './globalStyle.css';
 import Header from './components/Header'
-import Section from './components/Section'
+import MainPage from './Pages/MainPage'
 
 function App() {
   return (
     <>
       <Header />
-      <Section />
+      <MainPage />
     </>
   );
 }
