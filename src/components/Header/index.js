@@ -1,17 +1,74 @@
-import React from 'react'
 import * as S from './style'
+import React, { useEffect, useState } from 'react';
+import MainIcon from '../../images/burgerIcon.png'
 
 export default function Header() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    
+  }, [isOpen]);
+
+  const handleDropdownToggle = () => {
+    setIsOpen(true);
+    console.log("ture");
+  };
+
+  const handleDropdownToggle1 = () => {
+  }
+
+  const handleDropdownToggle2 = () => {
+    setIsOpen(false);
+    console.log("false");
+  };
+
   return (
-    <S.Container>
-      <S.Header>
-        <S.HeaderIcon>
-          dsf
-        </S.HeaderIcon>
-        <S.Menus>
-          sdf
-        </S.Menus>
-      </S.Header>
-    </S.Container>
+    <>
+      <S.Container isOpen={isOpen}>
+        <S.Header>
+          <S.HeaderIcon>
+            <S.MainIcon src={MainIcon} alt="icon" />
+          </S.HeaderIcon>
+          <S.Menus>
+            <S.lists onMouseOver={handleDropdownToggle} onMouseover={handleDropdownToggle1}><S.HeaderFont>메뉴소개 ▾</S.HeaderFont></S.lists>
+            <S.lists onMouseOver={handleDropdownToggle} onMouseover={handleDropdownToggle1}><S.HeaderFont>매장소개 ▾</S.HeaderFont></S.lists>
+            <S.lists onMouseOver={handleDropdownToggle} onMouseover={handleDropdownToggle1}><S.HeaderFont>이벤트 ▾</S.HeaderFont></S.lists>
+            <S.lists onMouseOver={handleDropdownToggle} onMouseover={handleDropdownToggle1}><S.HeaderFont>브렌드스토리 ▾</S.HeaderFont></S.lists>
+          </S.Menus>
+          <S.Buttons>
+            <S.Button1>가맹점 문의</S.Button1>
+            <S.Button2>딜리버리 주문</S.Button2>
+          </S.Buttons>
+        </S.Header>
+      </S.Container>
+      {isOpen && (
+        <S.DropDown>
+          <S.DropDownLilst onMouseLeave={handleDropdownToggle2}>
+            <S.Menu>
+              <S.MenuText>스페셜&할인팩</S.MenuText>
+              <S.MenuText>신제품(new)</S.MenuText>
+              <S.MenuText>프리미엄</S.MenuText>
+              <S.MenuText>와퍼&주니어</S.MenuText>
+              <S.MenuText>치킨&슈프림버거</S.MenuText>
+              <S.MenuText>올데이킹&킹모닝</S.MenuText>
+              <S.MenuText>사이드</S.MenuText>
+              <S.MenuText>음료&디저트</S.MenuText>
+            </S.Menu>
+            <S.Menu1>
+              <S.MenuText>매장찾기</S.MenuText>
+            </S.Menu1>
+            <S.Menu2>
+              <S.MenuText>이벤트</S.MenuText>
+            </S.Menu2>
+
+            <S.Menu3>
+              <S.MenuText>BRAND</S.MenuText>
+              <S.MenuText>WHOPPER</S.MenuText>
+              <S.MenuText>COMM.</S.MenuText>
+            </S.Menu3>
+          </S.DropDownLilst>
+        </S.DropDown>
+      )}
+    </>
   )
 }
