@@ -1,5 +1,7 @@
-import React from 'react';
-import * as S from './style';
+import React from "react";
+import * as S from "./style";
+import snsF from "../../images/sns_facebookpng.png";
+import snsI from "../../images/sns_insta.png";
 
 export default function Index() {
   return (
@@ -31,19 +33,19 @@ export default function Index() {
         <S.MenuDiv>
           <S.Title>
             <S.HeaderFont>이벤트</S.HeaderFont>
-          <S.Subtitle>
-            <S.Titles>이벤트</S.Titles>
-          </S.Subtitle>
+            <S.Subtitle>
+              <S.Titles>이벤트</S.Titles>
+            </S.Subtitle>
           </S.Title>
         </S.MenuDiv>
         <S.MenuDiv>
           <S.Title>
             <S.HeaderFont>브랜드 스토리</S.HeaderFont>
-          <S.Subtitle>
-            <S.Titles>BRAND</S.Titles>
-            <S.Titles>WHOPPER</S.Titles>
-            <S.Titles>COMM.</S.Titles>
-          </S.Subtitle>
+            <S.Subtitle>
+              <S.Titles>BRAND</S.Titles>
+              <S.Titles>WHOPPER</S.Titles>
+              <S.Titles>COMM.</S.Titles>
+            </S.Subtitle>
           </S.Title>
         </S.MenuDiv>
         <S.MenuDiv>
@@ -63,13 +65,21 @@ export default function Index() {
       <S.BottomContainer>
         <S.BottomDiv>
           <S.BottomTitle>BURGER KING</S.BottomTitle>
-          <S.BottomTitle2>이용약관<S.TextBoxs> | </S.TextBoxs>개인정보처리방침<S.TextBoxs> | </S.TextBoxs>법적고지</S.BottomTitle2>
+          <S.BottomTitle2>
+            이용약관<S.TextBoxs> | </S.TextBoxs>개인정보처리방침
+            <S.TextBoxs> | </S.TextBoxs>법적고지
+          </S.BottomTitle2>
         </S.BottomDiv>
         <S.BottomDiv2>
           <S.TextBox>
-            서울 종로구 삼봉로 71 G 타워 4F,5F 주식회사 비케이알 | 전화주문 1599-0505<br/>
-            <S.Saupja>사업자 등록번호 101-86-76277 |</S.Saupja> (주)BKR 대표이사 이동형<br/>
-            Copyright 2019 BKR Co., Ltd. All right Reserved<br/>
+            서울 종로구 삼봉로 71 G 타워 4F,5F 주식회사 비케이알 | 전화주문
+            1599-0505
+            <br />
+            <S.Saupja>사업자 등록번호 101-86-76277 |</S.Saupja> (주)BKR 대표이사
+            이동형
+            <br />
+            Copyright 2019 BKR Co., Ltd. All right Reserved
+            <br />
           </S.TextBox>
           <S.Recruit>
             <S.Yak>인재채용</S.Yak>
@@ -78,10 +88,10 @@ export default function Index() {
         </S.BottomDiv2>
         <S.Insta>
           <a href="https://www.facebook.com/burgerkingkorea">
-            <S.FaceBook/>
+            <S.FaceBook src={snsI} />
           </a>
           <a href="https://www.facebook.com/burgerkingkorea">
-            <S.Instagram/>
+            <S.Instagram src={snsF} />
           </a>
         </S.Insta>
       </S.BottomContainer>
