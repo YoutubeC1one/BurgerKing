@@ -45,7 +45,7 @@ export default function Index() {
             <S.HeaderFont>매장</S.HeaderFont>
           </S.Title>
           <S.Subtitle>
-            <S.Titles>매장찾기</S.Titles>
+            <S.Titles onClick={() => navigate("/findStore")}>매장찾기</S.Titles>
           </S.Subtitle>
         </S.MenuDiv>
         <S.MenuDiv>

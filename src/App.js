@@ -1,7 +1,6 @@
 import "./globalStyle.css";
 import Header from "./components/Header";
 import MainPage from "./Pages/MainPage";
-import Footer from "./components/Footer";
 import Page01 from "./Pages/MenuPages/01";
 import Page02 from "./Pages/MenuPages/02";
 import Page03 from "./Pages/MenuPages/03";
@@ -10,7 +9,7 @@ import Page05 from "./Pages/MenuPages/05";
 import Page06 from "./Pages/MenuPages/06";
 import Page07 from "./Pages/MenuPages/07";
 import Page08 from "./Pages/MenuPages/08";
-import Up from "./components/PageUp";
+import FindStore from "./Pages/FindStore";
 import { Route, Routes } from "react-router-dom";
 
 function App() {
@@ -27,9 +26,8 @@ function App() {
         <Route path="/sepcialSale05" element={<Page06 />}></Route>
         <Route path="/sepcialSale06" element={<Page07 />}></Route>
         <Route path="/sepcialSale07" element={<Page08 />}></Route>
+        <Route path="/findStore" element={<FindStore />}></Route>
       </Routes>
-      <Up />
-      <Footer />
     </>
   );
 }
