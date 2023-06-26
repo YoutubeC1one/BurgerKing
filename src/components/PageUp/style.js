@@ -11,13 +11,14 @@ const fadeIn = keyframes`
 
 export const Container = styled.div`
   cursor: pointer;
+  position: absolute;
   width: 50px;
   height: 50px;
   background-color: silver;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 30px 10px 1450px;
+  margin: 10px 30px 10px 1450px;
   opacity: 0;
   transition: opacity 0.3s;
 
