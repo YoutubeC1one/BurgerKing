@@ -1,35 +1,36 @@
-import styled, { css, keyframes } from 'styled-components';
+import styled, { css, keyframes } from "styled-components";
 
 export const Container = styled.div`
   width: 100%;
   background-color: white;
-  box-shadow:${({isOpen}) => isOpen === true ? '' : '0.5px 1.5px 1.5px 0.7px #dfdfdf'};
+  box-shadow: ${({ isOpen }) =>
+    isOpen === true ? "" : "0.5px 1.5px 1.5px 0.7px #dfdfdf"};
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: "BMJUA";
   position: fixed;
   z-index: 3;
-`
+`;
 export const Header = styled.div`
   width: 80%;
   height: 120px;
   display: flex;
-`
+`;
 export const HeaderIcon = styled.div`
   width: 12%;
   height: 120px;
   display: flex;
   justify-content: center;
   align-items: center;
-`
+`;
 export const Menus = styled.div`
   width: 60%;
   height: 120px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-`
+`;
 export const Buttons = styled.div`
   width: 31%;
   height: 120px;
@@ -37,11 +38,11 @@ export const Buttons = styled.div`
   justify-content: space-between;
   align-items: center;
   margin-left: 20px;
-`
+`;
 export const MainIcon = styled.img`
   width: 83px;
   height: 82px;
-`
+`;
 export const Button1 = styled.div`
   width: 168px;
   height: 50px;
@@ -54,11 +55,11 @@ export const Button1 = styled.div`
   font-size: 22px;
   margin-left: 10px;
   cursor: pointer;
-`
+`;
 export const Button2 = styled.div`
   width: 168px;
   height: 50px;
-  background-color: #D72300;
+  background-color: #d72300;
   color: white;
   border-radius: 35px;
   display: flex;
@@ -66,10 +67,8 @@ export const Button2 = styled.div`
   align-items: center;
   font-size: 22px;
   cursor: pointer;
-`
-export const MainDiv = styled.div`
-
-`
+`;
+export const MainDiv = styled.div``;
 
 export const lists = styled.div`
   width: 100%;
@@ -79,7 +78,7 @@ export const lists = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-`
+`;
 
 const slideDown = keyframes`
   from {
@@ -102,22 +101,22 @@ export const DropDown = styled.div`
   z-index: 999;
 `;
 
-
 export const DropDownLilst = styled.div`
   margin: 0 auto;
   width: 58%;
   height: 320px;
   display: flex;
-`
+  font-family: "BMJUA", sans-serif;
+`;
 export const Top = styled.div`
   width: 100%;
   height: 120px;
-`
+`;
 export const Menu = styled.div`
   display: flex;
   flex-direction: column;
   align-items: left;
-  width: 175px;
+  width: 170px;
   height: 320px;
   font-size: 15px;
   ${({ isOpen }) =>
@@ -125,7 +124,7 @@ export const Menu = styled.div`
     css`
       animation: ${slideDown} 0.3s ease-in-out forwards;
     `}
-`
+`;
 export const Menu1 = styled.div`
   display: flex;
   flex-direction: column;
@@ -138,7 +137,10 @@ export const Menu1 = styled.div`
     css`
       animation: ${slideDown} 0.3s ease-in-out forwards;
     `}
-`
+  width: 185px;
+  height: 320px;
+  font-size: 15px;
+`;
 export const Menu2 = styled.div`
   display: flex;
   flex-direction: column;
@@ -151,7 +153,7 @@ export const Menu2 = styled.div`
     css`
       animation: ${slideDown} 0.3s ease-in-out forwards;
     `}
-`
+`;
 export const Menu3 = styled.div`
   display: flex;
   flex-direction: column;
@@ -164,16 +166,16 @@ export const Menu3 = styled.div`
     css`
       animation: ${slideDown} 0.3s ease-in-out forwards;
     `}
-`
+`;
 export const MenuText = styled.div`
   margin: 0 0 15px 5px;
   font-weight: 500;
   color: #212121;
   cursor: pointer;
-`
+`;
 export const HeaderFont = styled.div`
   @font-face {
-	font-family: "BMJUA";
-	src: url('./fonts/BMJUA_ttf.ttf');
-}
-`
+    font-family: "BMJUA";
+    src: url("./fonts/BMJUA_ttf.ttf");
+  }
+`;

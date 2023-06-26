@@ -62,7 +62,7 @@ export const SnsItem = styled.div`
 export  const RoundedFont = styled.div`
   @font-face {
     font-family: 'MPLUSRounded';
-    src: url('/MPLUSRounded1c-Bold.ttf') format('truetype');
+    src: url('/fonts/MPLUSRounded1c-Bold.ttf') format('truetype');
     /* 다운로드한 폰트 파일의 경로를 지정합니다. */
     /* 경로는 public 디렉토리를 기준으로 설정됩니다. */
     /* 다운로드한 폰트 파일의 확장자와 포맷에 따라서 format 속성을 적절히 설정해야합니다. */
@@ -84,10 +84,75 @@ export const SnsItem_ = styled.div`
   flex-direction:column;
   align-items: center;
   justify-content: center;
+  margin-bottom:30px;
+  margin-left:10px;
 `;
 export const SnsItemButton = styled.div`
   background-color:white;
   color:black;
-  padding:4px 4px;
+  padding:6px 8px;
   border-radius:4px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+`
+export const KoreanFont = styled.div`
+  @font-face {
+	font-family: "BMJUA";
+	src: url('./fonts/BMJUA_ttf.ttf');
+  }
+  font-family:'BMJUA';
+`
+export const StyledLink = styled.a`
+  text-decoration: none;
+  color: inherit;
+
+  &:hover { 
+    text-decoration: none;
+    color: inherit;
+  }
+`;
+export const MainDeliveryGuide = styled.div`
+  width:1440px;
+  height:480px;
+`
+export const MainSearchShop = styled.div`
+  width:1440px;
+  height:600px;
+  background-color:white;
+  color:black;
+  display:flex;
+  flex-direction:column;
+  align-items: center;
+  justify-content: center;
+`
+export const MainSearchButton = styled.div`
+  width:140px;
+  height:50px;  
+  border-radius:100px; 
+  background-color:#d82200;
+  color:white;
+  display:flex;
+  justify-content:center;
+  align-items:center; 
+  margin-top:30px;
+`
+export const MainSearchList = styled.div`
+  display:flex;
+  justify-content:space-around;
+  align-items:center; 
+  margin-top:50px;
+`
+export const MainSearchItem = styled.div`
+  display:flex;
+  justify-content:center;
+  align-items:center; 
+  flex-direction:column;
+  text-align:center;
+  font-weight: 1000;
+`
+export const MainBurgerKingPhone = styled.div`
+  width:1440px;
+  height:200px;
+  background-image:url('https://www.burgerking.co.kr/dist/img/bg_home_cs.40b21d3f.png');
 `
