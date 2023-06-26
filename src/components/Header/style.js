@@ -10,7 +10,7 @@ export const Container = styled.div`
   justify-content: center;
   font-family: "BMJUA";
   position: fixed;
-  z-index: 3;
+  z-index: 7;
 `;
 export const Header = styled.div`
   width: 80%;
@@ -42,6 +42,7 @@ export const Buttons = styled.div`
 export const MainIcon = styled.img`
   width: 83px;
   height: 82px;
+  cursor: pointer;
 `;
 export const Button1 = styled.div`
   width: 168px;

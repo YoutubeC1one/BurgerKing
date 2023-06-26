@@ -2,8 +2,10 @@ import React from "react";
 import * as S from "./style";
 import snsF from "../../images/sns_facebookpng.png";
 import snsI from "../../images/sns_insta.png";
+import { useNavigate } from "react-router-dom";
 
 export default function Index() {
+  const navigate = useNavigate();
   return (
     <S.Container>
       <S.TopContainer>
@@ -12,14 +14,30 @@ export default function Index() {
             <S.HeaderFont>메뉴</S.HeaderFont>
           </S.Title>
           <S.Subtitle>
-            <S.Titles>스페셜&할인팩</S.Titles>
-            <S.Titles>신제품(NEW)</S.Titles>
-            <S.Titles>프리미엄</S.Titles>
-            <S.Titles>와퍼&주니어</S.Titles>
-            <S.Titles>치킨&슈프림버거</S.Titles>
-            <S.Titles>올데이킹&킹모닝</S.Titles>
-            <S.Titles>사이드</S.Titles>
-            <S.Titles>음료&디저트</S.Titles>
+            <S.Titles onClick={() => navigate("/sepcialSale")}>
+              스페셜&할인팩
+            </S.Titles>
+            <S.Titles onClick={() => navigate("/sepcialSale01")}>
+              신제품(NEW)
+            </S.Titles>
+            <S.Titles onClick={() => navigate("/sepcialSale02")}>
+              프리미엄
+            </S.Titles>
+            <S.Titles onClick={() => navigate("/sepcialSale03")}>
+              와퍼&주니어
+            </S.Titles>
+            <S.Titles onClick={() => navigate("/sepcialSale04")}>
+              치킨&슈프림버거
+            </S.Titles>
+            <S.Titles onClick={() => navigate("/sepcialSale05")}>
+              올데이킹&킹모닝
+            </S.Titles>
+            <S.Titles onClick={() => navigate("/sepcialSale06")}>
+              사이드
+            </S.Titles>
+            <S.Titles onClick={() => navigate("/sepcialSale07")}>
+              음료&디저트
+            </S.Titles>
           </S.Subtitle>
         </S.MenuDiv>
         <S.MenuDiv>
