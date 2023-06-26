@@ -2,6 +2,9 @@ import * as S from './style'
 import React, { useEffect, useState } from 'react';
 import MainIcon from '../../images/burgerIcon.png'
 
+// 이하 생략...
+
+
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -33,7 +36,7 @@ export default function Header() {
             <S.lists onMouseOver={handleDropdownToggle} onMouseover={handleDropdownToggle1}><S.HeaderFont>메뉴소개 ▾</S.HeaderFont></S.lists>
             <S.lists onMouseOver={handleDropdownToggle} onMouseover={handleDropdownToggle1}><S.HeaderFont>매장소개 ▾</S.HeaderFont></S.lists>
             <S.lists onMouseOver={handleDropdownToggle} onMouseover={handleDropdownToggle1}><S.HeaderFont>이벤트 ▾</S.HeaderFont></S.lists>
-            <S.lists onMouseOver={handleDropdownToggle} onMouseover={handleDropdownToggle1}><S.HeaderFont>브렌드스토리 ▾</S.HeaderFont></S.lists>
+            <S.lists onMouseOver={handleDropdownToggle} onMouseover={handleDropdownToggle1}><S.HeaderFont>브랜드스토리 ▾</S.HeaderFont></S.lists>
           </S.Menus>
           <S.Buttons>
             <S.Button1>가맹점 문의</S.Button1>
@@ -44,7 +47,7 @@ export default function Header() {
       {isOpen && (
         <S.DropDown>
           <S.DropDownLilst onMouseLeave={handleDropdownToggle2}>
-            <S.Menu>
+            <S.Menu isOpen={isOpen}>
               <S.MenuText>스페셜&할인팩</S.MenuText>
               <S.MenuText>신제품(new)</S.MenuText>
               <S.MenuText>프리미엄</S.MenuText>
@@ -54,14 +57,14 @@ export default function Header() {
               <S.MenuText>사이드</S.MenuText>
               <S.MenuText>음료&디저트</S.MenuText>
             </S.Menu>
-            <S.Menu1>
+            <S.Menu1 isOpen={isOpen}>
               <S.MenuText>매장찾기</S.MenuText>
             </S.Menu1>
-            <S.Menu2>
+            <S.Menu2 isOpen={isOpen}>
               <S.MenuText>이벤트</S.MenuText>
             </S.Menu2>
 
-            <S.Menu3>
+            <S.Menu3 isOpen={isOpen}>
               <S.MenuText>BRAND</S.MenuText>
               <S.MenuText>WHOPPER</S.MenuText>
               <S.MenuText>COMM.</S.MenuText>

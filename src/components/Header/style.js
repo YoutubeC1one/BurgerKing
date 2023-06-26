@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { css, keyframes } from 'styled-components';
 
 export const Container = styled.div`
   width: 100%;
@@ -81,6 +81,18 @@ export const lists = styled.div`
   justify-content: center;
 `
 
+const slideDown = keyframes`
+  from {
+    transform: translateY(-5px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+`;
+
+// 드롭다운 스타일
 export const DropDown = styled.div`
   width: 100%;
   position: fixed;
@@ -88,7 +100,8 @@ export const DropDown = styled.div`
   background-color: white;
   box-shadow: 0.5px 1.5px 1.5px 0.7px #dfdfdf;
   z-index: 999;
-`
+`;
+
 export const DropDownLilst = styled.div`
   margin: 0 auto;
   width: 58%;
@@ -107,6 +120,12 @@ export const Menu = styled.div`
   height: 320px;
   font-size: 15px;
   background-color: blue;
+
+  ${({ isOpen }) =>
+    isOpen &&
+    css`
+      animation: ${slideDown} 0.3s ease-in-out forwards;
+    `}
 `
 export const Menu1 = styled.div`
   display: flex;
@@ -116,6 +135,14 @@ export const Menu1 = styled.div`
   height: 320px;
   font-size: 15px;
   background-color: red;
+  width: 180px;
+  height: 320px;
+  font-size: 15px;
+  ${({ isOpen }) =>
+    isOpen &&
+    css`
+      animation: ${slideDown} 0.3s ease-in-out forwards;
+    `}
 `
 export const Menu2 = styled.div`
   display: flex;
@@ -124,6 +151,11 @@ export const Menu2 = styled.div`
   width: 145px;
   height: 320px;
   font-size: 15px;
+  ${({ isOpen }) =>
+    isOpen &&
+    css`
+      animation: ${slideDown} 0.3s ease-in-out forwards;
+    `}
 `
 export const Menu3 = styled.div`
   display: flex;
@@ -132,9 +164,16 @@ export const Menu3 = styled.div`
   width: 130px;
   height: 320px;
   font-size: 15px;
+  ${({ isOpen }) =>
+    isOpen &&
+    css`
+      animation: ${slideDown} 0.3s ease-in-out forwards;
+    `}
 `
 export const MenuText = styled.div`
   margin: 0 0 15px 5px;
+  font-weight: 500;
+  color: #212121;
   cursor: pointer;
 `
 export const HeaderFont = styled.div`
