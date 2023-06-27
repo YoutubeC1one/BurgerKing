@@ -11,7 +11,7 @@ export default function Index() {
       key: 1,
       image:
         "https://d1cua0vf0mkpiy.cloudfront.net/images/menu/normal/7a7ae692-9ab1-4fed-bf64-c070c599fbc6.png",
-      imgae2: 
+      imgae2:
         "https://www.burgerking.co.kr/dist/img/ico_flag_new02.250255f3.png",
       name: "DIABLO IV 스페셜 세트",
     },
@@ -19,7 +19,7 @@ export default function Index() {
       key: 2,
       image:
         "https://d1cua0vf0mkpiy.cloudfront.net/images/menu/normal/9a611b5a-80cb-460c-a71b-7a2624720e1e.png",
-      imgae2: 
+      imgae2:
         "https://www.burgerking.co.kr/dist/img/ico_flag_new02.250255f3.png",
       name: "HELLO DIABLO IV 팩1",
     },
@@ -27,7 +27,7 @@ export default function Index() {
       key: 3,
       image:
         "https://d1cua0vf0mkpiy.cloudfront.net/images/menu/normal/3de60d82-d1e8-461b-8438-1083a811df30.png",
-      imgae2: 
+      imgae2:
         "https://www.burgerking.co.kr/dist/img/ico_flag_new02.250255f3.png",
       name: "HELLO DIABLO IV 팩2",
     },
@@ -35,7 +35,7 @@ export default function Index() {
       key: 4,
       image:
         "https://d1cua0vf0mkpiy.cloudfront.net/images/menu/normal/1d96a9c7-3296-4267-8d9b-bf8cc8999d26.png",
-      imgae2: 
+      imgae2:
         "https://www.burgerking.co.kr/dist/img/ico_flag_new02.250255f3.png",
       name: "HELLO DIABLO IV 팩3",
     },
@@ -57,7 +57,7 @@ export default function Index() {
 
   return (
     <>
-      <ShowMenuNav />
+      <ShowMenuNav name={"메뉴소개"} />
       <S.Container>
         <S.ContainerBox>
           <S.ShowContentsBox>

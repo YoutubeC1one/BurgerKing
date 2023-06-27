@@ -10,7 +10,7 @@ export default function Index() {
   const dummy04 = [
     {
       key: 1,
-      imgae2: 
+      imgae2:
         "https://www.burgerking.co.kr/dist/img/ico_flag_best02.e30b860c.png",
       image:
         "https://d1cua0vf0mkpiy.cloudfront.net/images/menu/normal/4478b151-233b-46f7-a046-388c45242477.png",
@@ -18,7 +18,7 @@ export default function Index() {
     },
     {
       key: 2,
-      imgae2: 
+      imgae2:
         "https://www.burgerking.co.kr/dist/img/ico_flag_best02.e30b860c.png",
       image:
         "https://d1cua0vf0mkpiy.cloudfront.net/images/menu/normal/8fb37942-5278-46ce-a88c-cf28ef6445b6.png",
@@ -26,7 +26,7 @@ export default function Index() {
     },
     {
       key: 3,
-      imgae2: 
+      imgae2:
         "https://www.burgerking.co.kr/dist/img/ico_flag_best02.e30b860c.png",
       image:
         "https://d1cua0vf0mkpiy.cloudfront.net/images/menu/normal/0ad69efd-b7ca-4403-a750-3947bf31de7f.png",
@@ -74,7 +74,7 @@ export default function Index() {
 
   return (
     <>
-      <ShowMenuNav />
+      <ShowMenuNav name={"메뉴소개"} />
       <S.Container>
         <S.ContainerBox>
           <S.ShowContentsBox>

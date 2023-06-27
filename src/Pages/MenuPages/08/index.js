@@ -9,7 +9,7 @@ export default function Index() {
   const dummy01 = [
     {
       key: 1,
-      imgae2: 
+      imgae2:
         "https://www.burgerking.co.kr/dist/img/ico_flag_best02.e30b860c.png",
       image:
         "https://d1cua0vf0mkpiy.cloudfront.net/images/menu/normal/af12eea0-f927-4276-9ea8-cfc7468809de.png",
@@ -17,7 +17,7 @@ export default function Index() {
     },
     {
       key: 2,
-      imgae2: 
+      imgae2:
         "https://www.burgerking.co.kr/dist/img/ico_flag_best02.e30b860c.png",
       image:
         "https://d1cua0vf0mkpiy.cloudfront.net/images/menu/normal/832c7e84-30b6-4083-9ed1-66cb4d7113b3.png",
@@ -25,7 +25,7 @@ export default function Index() {
     },
     {
       key: 3,
-      imgae2: 
+      imgae2:
         "https://www.burgerking.co.kr/dist/img/ico_flag_best02.e30b860c.png",
       image:
         "https://d1cua0vf0mkpiy.cloudfront.net/images/menu/normal/c22422a5-f29b-4c04-8574-a5a786f5c78f.png",
@@ -33,7 +33,7 @@ export default function Index() {
     },
     {
       key: 4,
-      imgae2: 
+      imgae2:
         "https://www.burgerking.co.kr/dist/img/ico_flag_best02.e30b860c.png",
       image:
         "https://d1cua0vf0mkpiy.cloudfront.net/images/menu/normal/5390e233-3434-456f-85d5-a763bd3371f4.png",
@@ -98,7 +98,7 @@ export default function Index() {
 
   return (
     <>
-      <ShowMenuNav />
+      <ShowMenuNav name={"메뉴소개"} />
       <S.Container>
         <S.ContainerBox>
           <S.ShowContentsBox>

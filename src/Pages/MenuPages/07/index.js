@@ -9,7 +9,7 @@ export default function Index() {
   const dummy01 = [
     {
       key: 1,
-      imgae2: 
+      imgae2:
         "https://www.burgerking.co.kr/dist/img/ico_flag_best02.e30b860c.png",
       image:
         "https://d1cua0vf0mkpiy.cloudfront.net/images/menu/normal/105d9b3d-8071-4bf9-b9ab-be2411112ab4.png",
@@ -99,7 +99,7 @@ export default function Index() {
 
   return (
     <>
-      <ShowMenuNav />
+      <ShowMenuNav name={"메뉴소개"} />
       <S.Container>
         <S.ContainerBox>
           <S.ShowContentsBox>

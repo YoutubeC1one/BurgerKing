@@ -7,31 +7,35 @@ export const HeaderFont = styled.div`
   }
 `;
 
+export const Map = styled.div`
+  position: absolute;
+`;
+
 export const Container = styled.div`
   width: 100%;
   height: 74vh;
-  position: relative;
+  /* position: absolute; */
   ${({ toggle }) =>
     toggle &&
     css`
       margin-left: 480px;
       transition: margin-left 0.5s ease-in-out; /* 트랜지션 속성 추가 */
     `}
+  background-color: pink;
 `;
 
 export const ModalContainer = styled.div`
-  width: 500px;
-  height: 75vh;
-  background-color: pink;
-  position: absolute;
+  margin-left: auto;
+  width: 506px;
+  height: 75.6vh;
+  position: relative;
   z-index: 3;
-  margin-left: 940px;
-`
+`;
 export const Option = styled.div`
   width: 100%;
   height: 10vh;
   display: flex;
-`
+`;
 // ... 이전 코드 생략 ...
 
 export const Title = styled.div`
@@ -59,13 +63,13 @@ export const MarketOption = styled.div`
   margin-left: 35px;
   display: flex;
   cursor: pointer;
-`
+`;
 export const OptionImg = styled.img`
   width: 25px;
   height: 25px;
   margin-left: 10px;
   cursor: pointer;
-`
+`;
 export const Option2 = styled.div`
   width: 100%;
   height: 10vh;
@@ -73,7 +77,7 @@ export const Option2 = styled.div`
   display: flex;
   align-items: center;
   border-bottom: 1px solid silver;
-`
+`;
 
 export const Option3 = styled.div`
   display: flex;
@@ -85,7 +89,7 @@ export const Option3 = styled.div`
   display: flex;
   align-items: center;
   border-bottom: 1px solid silver;
-`
+`;
 
 export const OptionBoard = styled.div`
   display: flex;
@@ -97,22 +101,22 @@ export const OptionBoard = styled.div`
   font-family: "BMJUA";
   font-size: 22px;
   cursor: pointer;
-`
+`;
 export const OptionImg2 = styled.img`
   width: 25px;
   height: 25px;
   margin-right: 10px;
   cursor: pointer;
-`
+`;
 export const Option4 = styled.div`
   width: 100%;
   background-color: #ffe5cc;
-  height: 42.7vh;
+  height: 43.7vh;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-`
+`;
 export const SearchTitle = styled.div`
   width: 100%;
   height: 5vh;
@@ -120,60 +124,60 @@ export const SearchTitle = styled.div`
   padding-bottom: 15px;
   font-size: 23px;
   font-family: "BMJUA";
-`
+`;
 export const ColorTitle = styled.span`
   margin-left: 35px;
   color: red;
   font-size: 28px;
   font-family: "BMJUA";
-`
+`;
 export const ShowResult = styled.div`
   width: 96%;
   height: 25vh;
   background-color: white;
   margin-bottom: 20px;
-`
+`;
 export const ShowTitle = styled.div`
   width: 100%;
   height: 7vh;
   font-size: 22px;
   font-family: "BMJUA";
-`
+`;
 export const ShowContents = styled.div`
   width: 100%;
   height: 10vh;
   margin-top: 20px;
   font-family: "BMJUA";
-`
+`;
 export const ShowIcon = styled.div`
   width: 100%;
   height: 10vh;
   font-family: "BMJUA";
-`
+`;
 export const SubTitle = styled.div`
   margin-left: 30px;
   padding-top: 25px;
   font-size: 22px;
-`
+`;
 export const SubTitle2 = styled.div`
   margin-left: 30px;
   padding-top: 12px;
   font-size: 18px;
   font-weight: 300;
   color: silver;
-`
+`;
 export const InputBox = styled.input`
   border: none;
   height: 8vh;
   width: 350px;
   border-bottom: 1px solid gray;
-  &:focus{
+  &:focus {
     outline: none;
   }
   font-family: "BMJUA";
   font-size: 25px;
   padding-left: 10px;
-`
+`;
 export const Select = styled.select`
   width: 200px;
   height: 50px;
@@ -189,17 +193,17 @@ export const Select = styled.select`
 
 export const Options = styled.option`
   font-size: 15px;
-`
+`;
 export const ToggleBtn = styled.div`
   position: absolute;
   width: 20px;
   height: 50px;
   background-color: gray;
-  z-index:3;
+  z-index: 3;
   margin-top: 230px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
   cursor: pointer;
-`
+`;

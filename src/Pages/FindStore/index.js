@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import * as S from "./style";
-import ShowStoreNav from "../../components/ShowStoreNav";
-import UpArrow from '../../images/arrowUp.png';
-import Location from '../../images/meLocation.png';
-import SearchIcon from '../../images/s.png';
+import ShowMenuNav from "../../components/ShowMenuNav";
+import UpArrow from "../../images/arrowUp.png";
+import Location from "../../images/meLocation.png";
+import SearchIcon from "../../images/s.png";
 
 const { kakao } = window;
 
@@ -16,7 +16,6 @@ export default function Index() {
   const [store, setStore] = useState("");
   const [selectedOption, setSelectedOption] = useState("");
   const [selectedRegion, setSelectedRegion] = useState("");
-
 
   useEffect(() => {
     const script = document.createElement("script");
@@ -46,8 +45,8 @@ export default function Index() {
           kakao.maps.event.addListener(marker, "click", function () {
             infowindow.setContent(
               '<div style="padding:5px;font-size:12px;">' +
-              place.place_name +
-              "</div>"
+                place.place_name +
+                "</div>"
             );
             infowindow.open(map, marker);
           });
@@ -75,8 +74,11 @@ export default function Index() {
           ps.keywordSearch("부산 강서구 버거킹", placesSearchCB);
         } else if (page === 1 && locationInput !== "") {
           ps.keywordSearch(store, placesSearchCB);
-        } else{
-          ps.keywordSearch(`${selectedOption} ${selectedRegion} 버거킹`, placesSearchCB);
+        } else {
+          ps.keywordSearch(
+            `${selectedOption} ${selectedRegion} 버거킹`,
+            placesSearchCB
+          );
         }
       });
     };
@@ -114,8 +116,8 @@ export default function Index() {
           kakao.maps.event.addListener(marker, "click", function () {
             infowindow.setContent(
               '<div style="padding:5px;font-size:12px;">' +
-              place.place_name +
-              "</div>"
+                place.place_name +
+                "</div>"
             );
             infowindow.open(map, marker);
           });
@@ -173,19 +175,17 @@ export default function Index() {
 
   return (
     <>
-      <ShowStoreNav />
+      <ShowMenuNav name={"매장찾기"} />
       <S.Container toggle={toggle}>
+        <S.Map id="map" style={{ width: "100%", height: "75.8vh" }}></S.Map>
         <S.ModalContainer>
-        {/* <S.ToggleBtn toggle={toggle} onClick={() => {
-          setToggle(!toggle);
-        }}>x</S.ToggleBtn> */}
           <S.Option>
             <OptionTitle title="가까운 매장" index={0} />
             <OptionTitle title="매장명 검색" index={1} />
             <OptionTitle title="지역 검색" index={2} />
           </S.Option>
 
-         <S.Option2>
+          <S.Option2>
             <S.MarketOption>
               매장옵션
               <S.OptionImg src={UpArrow} alt="" />
@@ -199,8 +199,7 @@ export default function Index() {
                   alert("설정(설정 아이콘) > 개인정보 > 위치서비스를 켜주세요");
                 }}
               >
-                <S.OptionImg2 src={Location} alt="" />
-                현 위치로 매장 검색
+                <S.OptionImg2 src={Location} alt="" />현 위치로 매장 검색
               </S.OptionBoard>
             </S.Option3>
           )}
@@ -245,9 +244,17 @@ export default function Index() {
 
           <S.Option4>
             <S.SearchTitle>
-              <S.ColorTitle>{searchResultCount}개 </S.ColorTitle>의 검색 결과가 있습니다.
+              <S.ColorTitle>{searchResultCount}개 </S.ColorTitle>의 검색 결과가
+              있습니다.
             </S.SearchTitle>
-            <div style={{ overflowY: "scroll", height: "35vh", width: "90%", margin: "10px 0 0 10px" }}>
+            <div
+              style={{
+                overflowY: "scroll",
+                height: "35vh",
+                width: "90%",
+                margin: "10px 0 0 10px",
+              }}
+            >
               {searchResults.map((result, index) => (
                 <S.ShowResult key={index}>
                   <S.ShowTitle>
@@ -266,7 +273,6 @@ export default function Index() {
             </div>
           </S.Option4>
         </S.ModalContainer>
-        <div id="map" style={{ width: "100%", height: "520px"}}></div>
       </S.Container>
     </>
   );

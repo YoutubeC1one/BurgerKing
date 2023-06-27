@@ -11,7 +11,7 @@ export default function Index() {
       key: 1,
       image:
         "https://d1cua0vf0mkpiy.cloudfront.net/images/menu/normal/4478b151-233b-46f7-a046-388c45242477.png",
-        imgae2: 
+      imgae2:
         "https://www.burgerking.co.kr/dist/img/ico_flag_new02.250255f3.png",
       name: "헬로 이나리우스 와퍼",
     },
@@ -19,13 +19,13 @@ export default function Index() {
       key: 2,
       image:
         "https://d1cua0vf0mkpiy.cloudfront.net/images/menu/normal/8fb37942-5278-46ce-a88c-cf28ef6445b6.png",
-        imgae2: 
+      imgae2:
         "https://www.burgerking.co.kr/dist/img/ico_flag_new02.250255f3.png",
       name: "헬로 릴리트 와퍼",
     },
     {
       key: 3,
-      imgae2: 
+      imgae2:
         "https://www.burgerking.co.kr/dist/img/ico_flag_new02.250255f3.png",
       image:
         "https://d1cua0vf0mkpiy.cloudfront.net/images/menu/normal/0ad69efd-b7ca-4403-a750-3947bf31de7f.png",
@@ -33,7 +33,7 @@ export default function Index() {
     },
     {
       key: 4,
-      imgae2: 
+      imgae2:
         "https://www.burgerking.co.kr/dist/img/ico_flag_new02.250255f3.png",
       image:
         "https://d1cua0vf0mkpiy.cloudfront.net/images/menu/normal/e78a0c27-9efe-440b-b3a5-9aff046b0f06.png",
@@ -41,7 +41,7 @@ export default function Index() {
     },
     {
       key: 5,
-      imgae2: 
+      imgae2:
         "https://www.burgerking.co.kr/dist/img/ico_flag_new02.250255f3.png",
       image:
         "https://d1cua0vf0mkpiy.cloudfront.net/images/menu/normal/e084d117-3fb8-4a30-a5cf-fec281c1f4b5.png",
@@ -49,7 +49,7 @@ export default function Index() {
     },
     {
       key: 6,
-      imgae2: 
+      imgae2:
         "https://www.burgerking.co.kr/dist/img/ico_flag_new02.250255f3.png",
       image:
         "https://d1cua0vf0mkpiy.cloudfront.net/images/menu/normal/9b87c1c1-1f87-43c9-a7f1-fdd47a6aef87.png",
@@ -57,7 +57,7 @@ export default function Index() {
     },
     {
       key: 7,
-      imgae2: 
+      imgae2:
         "https://www.burgerking.co.kr/dist/img/ico_flag_new02.250255f3.png",
       image:
         "https://d1cua0vf0mkpiy.cloudfront.net/images/menu/normal/5a8acce7-4f35-40a9-a2f6-ceb1d2bc8571.png",
@@ -81,7 +81,7 @@ export default function Index() {
 
   return (
     <>
-      <ShowMenuNav />
+      <ShowMenuNav name={"메뉴소개"} />
       <S.Container>
         <S.ContainerBox>
           <S.ShowContentsBox>
