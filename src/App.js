@@ -10,6 +10,9 @@ import Page05 from "./Pages/MenuPages/05";
 import Page06 from "./Pages/MenuPages/06";
 import Page07 from "./Pages/MenuPages/07";
 import Page08 from "./Pages/MenuPages/08";
+import EventPage0 from "./Pages/EventPages/0";
+import EventPage1 from "./Pages/EventPages/1";
+import EventPageAll from "./Pages/EventPages/all";
 import Up from "./components/PageUp";
 import { Route, Routes } from "react-router-dom";
 
@@ -27,6 +30,9 @@ function App() {
         <Route path="/sepcialSale05" element={<Page06 />}></Route>
         <Route path="/sepcialSale06" element={<Page07 />}></Route>
         <Route path="/sepcialSale07" element={<Page08 />}></Route>
+        <Route path="/event/0" element={<EventPage0 />}></Route>
+        <Route path="/event/1" element={<EventPage1 />}></Route>
+        <Route path="/event/all" element={<EventPageAll />}></Route>
       </Routes>
       <Up />
       <Footer />

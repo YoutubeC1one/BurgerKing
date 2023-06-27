@@ -52,7 +52,7 @@ export default function Index() {
           <S.Title>
             <S.HeaderFont>이벤트</S.HeaderFont>
             <S.Subtitle>
-              <S.Titles>이벤트</S.Titles>
+              <S.Titles onClick={()=> navigate("/event/0")}>이벤트</S.Titles>
             </S.Subtitle>
           </S.Title>
         </S.MenuDiv>

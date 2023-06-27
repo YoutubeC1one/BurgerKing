@@ -103,7 +103,7 @@ export default function Header() {
               <S.MenuText>매장찾기</S.MenuText>
             </S.Menu1>
             <S.Menu2 isOpen={isOpen}>
-              <S.MenuText>이벤트</S.MenuText>
+              <S.MenuText onClick={()=> navigate("/event/0")}>이벤트</S.MenuText>
             </S.Menu2>
 
             <S.Menu3 isOpen={isOpen}>
