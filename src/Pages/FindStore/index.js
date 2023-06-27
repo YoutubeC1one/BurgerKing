@@ -176,9 +176,9 @@ export default function Index() {
       <ShowStoreNav />
       <S.Container toggle={toggle}>
         <S.ModalContainer>
-        <S.ToggleBtn toggle={toggle} onClick={() => {
+        {/* <S.ToggleBtn toggle={toggle} onClick={() => {
           setToggle(!toggle);
-        }}>x</S.ToggleBtn>
+        }}>x</S.ToggleBtn> */}
           <S.Option>
             <OptionTitle title="가까운 매장" index={0} />
             <OptionTitle title="매장명 검색" index={1} />
