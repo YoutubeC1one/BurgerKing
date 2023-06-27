@@ -20,7 +20,7 @@ export const ShowMenu = styled.div`
   width: 130px;
   height: 40px;
   background-color: white;
-  font-size: 40px;
+  font-size: 36px;
   font-family: "BMJUA", sans-serif;
 `;
 
@@ -53,21 +53,14 @@ export const TextArea = styled.div`
 `;
 
 export const ContentBox = styled.div`
-  height: 300px;
-  margin: 30px 45.5px 0 0;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
+  margin: 0 20px 0 30px;
 `;
 
 export const ContentTable = styled.div`
-  margin: 0 auto;
-  width: 92%;
-  height: 600px;
+  margin-top: 100px;
+  width: 100%;
+  height:80vh;
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
 `;
 
@@ -77,7 +70,10 @@ export const Images = styled.img`
 `;
 
 export const Text = styled.div`
-  margin-top: 25px;
+  display: flex;
+  margin-top: 20px;
+  align-items: center;
+  justify-content: center;
   font-size: 22px;
   font-family: "BMJUA";
 `;
@@ -87,3 +83,13 @@ export const Line = styled.div`
   padding-bottom: 2px;
   border-bottom: 3px solid red;
 `;
+
+export const Imagess = styled.img`
+  width: 50px;
+  background-color: white;
+  color: white;
+  border: none;
+  margin: 0 150px 150px 0;
+  position: absolute;
+  z-index: 3;
+`

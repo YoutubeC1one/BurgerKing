@@ -9,6 +9,8 @@ export default function Index() {
   const dummy01 = [
     {
       key: 1,
+      imgae2: 
+        "https://www.burgerking.co.kr/dist/img/ico_flag_best02.e30b860c.png",
       image:
         "https://d1cua0vf0mkpiy.cloudfront.net/images/menu/normal/105d9b3d-8071-4bf9-b9ab-be2411112ab4.png",
       name: "해쉬 브라운",
@@ -86,6 +88,7 @@ export default function Index() {
       <S.ContentTable>
         {dummy01.map((ele) => (
           <S.ContentBox key={ele.key}>
+            <S.Imagess src={ele.imgae2} />
             <S.Images src={ele.image} alt="img" />
             <S.Text>{ele.name}</S.Text>
           </S.ContentBox>

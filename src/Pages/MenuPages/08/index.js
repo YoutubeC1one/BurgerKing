@@ -9,24 +9,32 @@ export default function Index() {
   const dummy01 = [
     {
       key: 1,
+      imgae2: 
+        "https://www.burgerking.co.kr/dist/img/ico_flag_best02.e30b860c.png",
       image:
         "https://d1cua0vf0mkpiy.cloudfront.net/images/menu/normal/af12eea0-f927-4276-9ea8-cfc7468809de.png",
       name: "제로슈가 에이드",
     },
     {
       key: 2,
+      imgae2: 
+        "https://www.burgerking.co.kr/dist/img/ico_flag_best02.e30b860c.png",
       image:
         "https://d1cua0vf0mkpiy.cloudfront.net/images/menu/normal/832c7e84-30b6-4083-9ed1-66cb4d7113b3.png",
       name: "망고 선데",
     },
     {
       key: 3,
+      imgae2: 
+        "https://www.burgerking.co.kr/dist/img/ico_flag_best02.e30b860c.png",
       image:
         "https://d1cua0vf0mkpiy.cloudfront.net/images/menu/normal/c22422a5-f29b-4c04-8574-a5a786f5c78f.png",
       name: "컵망고 아이스크림",
     },
     {
       key: 4,
+      imgae2: 
+        "https://www.burgerking.co.kr/dist/img/ico_flag_best02.e30b860c.png",
       image:
         "https://d1cua0vf0mkpiy.cloudfront.net/images/menu/normal/5390e233-3434-456f-85d5-a763bd3371f4.png",
       name: "코카콜라",
@@ -79,6 +87,7 @@ export default function Index() {
       <S.ContentTable>
         {dummy01.map((ele) => (
           <S.ContentBox key={ele.key}>
+            <S.Imagess src={ele.imgae2} />
             <S.Images src={ele.image} alt="img" />
             <S.Text>{ele.name}</S.Text>
           </S.ContentBox>

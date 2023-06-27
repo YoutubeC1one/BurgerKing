@@ -19,7 +19,7 @@ export const ShowMenu = styled.div`
   width: 130px;
   height: 40px;
   background-color: white;
-  font-size: 40px;
+  font-size: 36px;
   font-family: "BMJUA", sans-serif;
 `;
 
@@ -71,6 +71,7 @@ export const ContentTable = styled.div`
 export const Images = styled.img`
   width: 220px;
   height: 150px;
+  position: relative;
 `;
 
 export const Text = styled.div`
@@ -84,3 +85,11 @@ export const Line = styled.div`
   padding-bottom: 2px;
   border-bottom: 3px solid red;
 `;
+
+export const Imagess = styled.img`
+  width: 50px;
+  height: 35px;
+  margin: 0 150px 150px 0;
+  position: absolute;
+  z-index: 3;
+`
