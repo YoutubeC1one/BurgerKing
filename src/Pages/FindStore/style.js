@@ -21,7 +21,6 @@ export const Container = styled.div`
       margin-left: 480px;
       transition: margin-left 0.5s ease-in-out; /* 트랜지션 속성 추가 */
     `}
-  background-color: pink;
 `;
 
 export const ModalContainer = styled.div`
