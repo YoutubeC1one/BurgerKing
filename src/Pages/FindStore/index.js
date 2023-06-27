@@ -9,10 +9,14 @@ const { kakao } = window;
 
 export default function Index() {
   const [page, setPage] = useState(0);
+  const [toggle, setToggle] = useState(false);
   const [locationInput, setLocationInput] = useState("");
   const [searchResultCount, setSearchResultCount] = useState(0);
   const [searchResults, setSearchResults] = useState([]);
   const [store, setStore] = useState("");
+  const [selectedOption, setSelectedOption] = useState("");
+  const [selectedRegion, setSelectedRegion] = useState("");
+
 
   useEffect(() => {
     const script = document.createElement("script");
@@ -68,13 +72,15 @@ export default function Index() {
         }
 
         if (page === 0) {
-          ps.keywordSearch("부산 버거킹", placesSearchCB);
+          ps.keywordSearch("부산 강서구 버거킹", placesSearchCB);
         } else if (page === 1 && locationInput !== "") {
           ps.keywordSearch(store, placesSearchCB);
+        } else{
+          ps.keywordSearch(`${selectedOption} ${selectedRegion} 버거킹`, placesSearchCB);
         }
       });
     };
-  }, [page, locationInput, store]);
+  }, [page, locationInput, store, selectedOption, selectedRegion]);
 
   const searchLocation = () => {
     setStore(locationInput);
@@ -144,6 +150,14 @@ export default function Index() {
     setLocationInput(e.target.value);
   };
 
+  const handleOptionChange = (e) => {
+    setSelectedOption(e.target.value);
+  };
+
+  const handleRegionChange = (e) => {
+    setSelectedRegion(e.target.value);
+  };
+
   const OptionTitle = ({ title, index }) => {
     return (
       <S.Title
@@ -160,15 +174,18 @@ export default function Index() {
   return (
     <>
       <ShowStoreNav />
-      <S.Container>
+      <S.Container toggle={toggle}>
         <S.ModalContainer>
+        <S.ToggleBtn toggle={toggle} onClick={() => {
+          setToggle(!toggle);
+        }}>x</S.ToggleBtn>
           <S.Option>
             <OptionTitle title="가까운 매장" index={0} />
             <OptionTitle title="매장명 검색" index={1} />
             <OptionTitle title="지역 검색" index={2} />
           </S.Option>
 
-          <S.Option2>
+         <S.Option2>
             <S.MarketOption>
               매장옵션
               <S.OptionImg src={UpArrow} alt="" />
@@ -191,6 +208,38 @@ export default function Index() {
             <S.Option3>
               <S.InputBox type="text" onChange={search} value={locationInput} />
               <S.OptionImg src={SearchIcon} alt="" onClick={searchLocation} />
+            </S.Option3>
+          )}
+          {page === 2 && (
+            <S.Option3>
+              <S.Select onChange={handleOptionChange}>
+                <option>특별/광역시</option>
+                <option value={"서울특별시"}>서울특별시</option>
+                <option value={"부산광역시"}>부산광역시</option>
+                <option value={"대구광역시"}>대구광역시</option>
+                <option value={"인천광역시"}>인천광역시</option>
+                <option value={"광주광역시"}>광주광역시</option>
+                <option value={"대전광역시"}>대전광역시</option>
+                <option value={"울산광역시"}>울산광역시</option>
+                <option value={"세종특별자치시"}>세종특별자치시</option>
+                <option value={"경기도"}>경기도</option>
+                <option value={"강원도"}>강원도</option>
+                <option value={"충척북도"}>충척북도</option>
+                <option value={"충청남도"}>충청남도</option>
+              </S.Select>
+              <S.Select onChange={handleRegionChange}>
+                <option>군,구</option>
+                <option value={"강남구"}>강남구</option>
+                <option value={"강동구"}>강동구</option>
+                <option value={"강북구"}>강북구</option>
+                <option value={"강서구"}>강서구</option>
+                <option value={"관악구"}>관악구</option>
+                <option value={"광진구"}>광진구</option>
+                <option value={"구로구"}>구로구</option>
+                <option value={"금천구"}>금천구</option>
+                <option value={"서대문구"}>서대문구</option>
+                <option value={"서초구"}>서초구</option>
+              </S.Select>
             </S.Option3>
           )}
 
@@ -217,8 +266,7 @@ export default function Index() {
             </div>
           </S.Option4>
         </S.ModalContainer>
-
-        <div id="map" style={{ width: "100%", height: "520px", position: "absolute" }}></div>
+        <div id="map" style={{ width: "100%", height: "520px"}}></div>
       </S.Container>
     </>
   );

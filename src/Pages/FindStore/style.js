@@ -11,6 +11,12 @@ export const Container = styled.div`
   width: 100%;
   height: 74vh;
   position: relative;
+  ${({ toggle }) =>
+    toggle &&
+    css`
+      margin-left: 480px;
+      transition: margin-left 0.5s ease-in-out; /* 트랜지션 속성 추가 */
+    `}
 `;
 
 export const ModalContainer = styled.div`
@@ -167,4 +173,33 @@ export const InputBox = styled.input`
   font-family: "BMJUA";
   font-size: 25px;
   padding-left: 10px;
+`
+export const Select = styled.select`
+  width: 200px;
+  height: 50px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: none;
+  border: none;
+  outline: none;
+  font-size: 23px;
+  font-family: "BMJUA";
+`;
+
+export const Options = styled.option`
+  font-size: 15px;
+`
+export const ToggleBtn = styled.div`
+  position: absolute;
+  width: 20px;
+  height: 50px;
+  background-color: gray;
+  z-index:3;
+  margin-top: 230px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  cursor: pointer;
 `
