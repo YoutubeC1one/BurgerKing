@@ -1,4 +1,11 @@
-import styled from "styled-components";
+import styled, { css, keyframes } from "styled-components";
+
+export const HeaderFont = styled.div`
+  @font-face {
+    font-family: "BMJUA";
+    src: url("./fonts/BMJUA_ttf.ttf");
+  }
+`;
 
 export const Container = styled.div`
   width: 100%;
@@ -12,6 +19,7 @@ export const Container = styled.div`
 
 export const NavText = styled.div`
   color: white;
-  font-size: 17px;
+  font-size: 19px;
   margin-left: 190px;
+  font-family: "BMJUA";
 `;

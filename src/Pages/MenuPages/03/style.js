@@ -53,13 +53,13 @@ export const TextArea = styled.div`
 `;
 
 export const ContentBox = styled.div`
-  margin: 0 20px 0 30px;
+  margin: 0 35px 0 35px;
 `;
 
 export const ContentTable = styled.div`
   margin-top: 100px;
-  width: 100%;
-  height:80vh;
+  width: 110%;
+  height: 80vh;
   display: flex;
   flex-wrap: wrap;
 `;
@@ -82,4 +82,12 @@ export const Line = styled.div`
   color: red;
   padding-bottom: 2px;
   border-bottom: 3px solid red;
+`;
+
+export const Imagess = styled.img`
+  width: 50px;
+  height: 35px;
+  margin: 0 150px 150px 0;
+  position: absolute;
+  z-index: 2;
 `;

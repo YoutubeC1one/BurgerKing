@@ -55,6 +55,7 @@ export const ContentBox = styled.div`
   width: 286px;
   height: 300px;
   margin-top: 30px;
+  margin-left: 5px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -63,7 +64,7 @@ export const ContentBox = styled.div`
 
 export const ContentTable = styled.div`
   margin: 0 auto;
-  width: 92%;
+  width: 100%;
   height: 300px;
   display: flex;
 `;
@@ -92,4 +93,4 @@ export const Imagess = styled.img`
   margin: 0 150px 150px 0;
   position: absolute;
   z-index: 3;
-`
+`;
