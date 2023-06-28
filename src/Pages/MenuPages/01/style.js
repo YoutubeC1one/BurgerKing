@@ -54,7 +54,7 @@ export const TextArea = styled.div`
 export const ContentBox = styled.div`
   width: 286px;
   height: 300px;
-  margin-top: 30px;
+  margin-top: 60px;
   margin-left: 5px;
   display: flex;
   flex-direction: column;
