@@ -74,6 +74,7 @@ export const MainDiv = styled.div``;
 export const lists = styled.div`
   width: 100%;
   height: 100px;
+  margin-top: 22px;
   font-size: 27px;
   cursor: pointer;
   display: flex;

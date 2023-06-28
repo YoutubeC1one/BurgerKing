@@ -1,16 +1,22 @@
 import * as S from "./style";
+import { useState } from "react";
 import ShowMenuNav from "../../../components/ShowMenuNav";
 import { useNavigate } from "react-router-dom";
+import Footer from "../../../components/Footer";
+import Up from "../../../components/PageUp";
 
 export default function Index() {
   const navigate = useNavigate();
+  const [stateId, setStateId] = useState(false);
 
   const dummy04 = [
     {
       key: 1,
+      imgae2:
+        "https://www.burgerking.co.kr/dist/img/ico_flag_best02.e30b860c.png",
       image:
         "https://d1cua0vf0mkpiy.cloudfront.net/images/menu/normal/4478b151-233b-46f7-a046-388c45242477.png",
-      name: "더블 비트 불고기 버거 세트",
+      name: "갈릭 불고기 와퍼",
     },
     {
       key: 2,
@@ -20,9 +26,11 @@ export default function Index() {
     },
     {
       key: 3,
+      imgae2:
+        "https://www.burgerking.co.kr/dist/img/ico_flag_best02.e30b860c.png",
       image:
         "https://d1cua0vf0mkpiy.cloudfront.net/images/menu/normal/0ad69efd-b7ca-4403-a750-3947bf31de7f.png",
-      name: "오믈렛킹모닝",
+      name: "콰트로 치즈 와퍼",
     },
     {
       key: 4,
@@ -73,6 +81,7 @@ export default function Index() {
       <S.ContentTable>
         {dummy04.map((ele) => (
           <S.ContentBox key={ele.key}>
+            <S.Imagess src={ele.imgae2} />
             <S.Images src={ele.image} alt="img" />
             <S.Text>{ele.name}</S.Text>
           </S.ContentBox>
@@ -83,7 +92,7 @@ export default function Index() {
 
   return (
     <>
-      <ShowMenuNav />
+      <ShowMenuNav name={"메뉴소개"} />
       <S.Container>
         <S.ContainerBox>
           <S.ShowContentsBox>
@@ -118,6 +127,8 @@ export default function Index() {
           <MenuPage01 />
         </S.ContainerBox>
       </S.Container>
+      <Up />
+      <Footer />
     </>
   );
 }

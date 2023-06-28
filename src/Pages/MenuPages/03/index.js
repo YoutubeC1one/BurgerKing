@@ -1,6 +1,8 @@
 import * as S from "./style";
 import ShowMenuNav from "../../../components/ShowMenuNav";
 import { useNavigate } from "react-router-dom";
+import Footer from "../../../components/Footer";
+import Up from "../../../components/PageUp";
 
 export default function Index() {
   const navigate = useNavigate();
@@ -53,7 +55,7 @@ export default function Index() {
 
   return (
     <>
-      <ShowMenuNav />
+      <ShowMenuNav name={"메뉴소개"} />
       <S.Container>
         <S.ContainerBox>
           <S.ShowContentsBox>
@@ -88,6 +90,8 @@ export default function Index() {
           <MenuPage01 />
         </S.ContainerBox>
       </S.Container>
+      <Up />
+      <Footer />
     </>
   );
 }

@@ -1,12 +1,16 @@
 import * as S from "./style";
 import ShowMenuNav from "../../../components/ShowMenuNav";
 import { useNavigate } from "react-router-dom";
+import Footer from "../../../components/Footer";
+import Up from "../../../components/PageUp";
 
 export default function Index() {
   const navigate = useNavigate();
   const dummy01 = [
     {
       key: 1,
+      imgae2:
+        "https://www.burgerking.co.kr/dist/img/ico_flag_best02.e30b860c.png",
       image:
         "https://d1cua0vf0mkpiy.cloudfront.net/images/menu/normal/105d9b3d-8071-4bf9-b9ab-be2411112ab4.png",
       name: "해쉬 브라운",
@@ -84,6 +88,7 @@ export default function Index() {
       <S.ContentTable>
         {dummy01.map((ele) => (
           <S.ContentBox key={ele.key}>
+            <S.Imagess src={ele.imgae2} />
             <S.Images src={ele.image} alt="img" />
             <S.Text>{ele.name}</S.Text>
           </S.ContentBox>
@@ -94,7 +99,7 @@ export default function Index() {
 
   return (
     <>
-      <ShowMenuNav />
+      <ShowMenuNav name={"메뉴소개"} />
       <S.Container>
         <S.ContainerBox>
           <S.ShowContentsBox>
@@ -129,6 +134,8 @@ export default function Index() {
           <MenuPage01 />
         </S.ContainerBox>
       </S.Container>
+      <Up />
+      <Footer />
     </>
   );
 }
