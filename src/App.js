@@ -14,6 +14,7 @@ import EventPage0 from "./Pages/EventPages/0";
 import EventPage1 from "./Pages/EventPages/1";
 import EventPageAll from "./Pages/EventPages/all";
 import Up from "./components/PageUp";
+import NewShop from "./Pages/EventPages/NewShop"
 import { Route, Routes } from "react-router-dom";
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
         <Route path="/event/0" element={<EventPage0 />}></Route>
         <Route path="/event/1" element={<EventPage1 />}></Route>
         <Route path="/event/all" element={<EventPageAll />}></Route>
+        <Route path="/newshop" element={<NewShop />}></Route>
       </Routes>
       <Up />
       <Footer />

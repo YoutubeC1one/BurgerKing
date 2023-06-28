@@ -135,14 +135,10 @@ export default function Index() {
         <S.EventB style={{
           borderBottom:"2px solid black",
           backgroundColor:"#f2f2f2",
-          
-        }}>
-          <S.KoreanFont style={{
-            fontSize:"30px",
-            color:"#bfbfbf"
-          }}>
+        }}
+        
+        onClick={()=>navigate("/newshop")}>
             신규매장
-          </S.KoreanFont>
         </S.EventB>
       </S.PageSelect>
       <S.Events>

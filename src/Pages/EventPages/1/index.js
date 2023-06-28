@@ -93,7 +93,8 @@ export default function Index() {
           <S.KoreanFont style={{
             fontSize:"30px",
             color:"#bfbfbf"
-          }}>
+          }}
+          onClick={()=>navigate("/newshop")}>
             신규매장
           </S.KoreanFont>
         </S.EventB>

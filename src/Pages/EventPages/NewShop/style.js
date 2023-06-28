@@ -22,33 +22,12 @@ export const KoreanFont = styled.div`
   }
   font-family:'BMJUA';
 `
-export const EventSelect = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`
-export const EventType = styled.div`
-  margin :0 14px;
-  cursor: pointer;
-`
-export const TextHover = styled.div`
-  color:#b6b9b8;
-  &:hover{
-    color:black;
-  }
-`
-export const Underline = styled.div`
-  left: 0;
-  width: 100%;
-  height: 2.4px;
-  background-color: #df2419;
-`;
 export const PageSelect = styled.div`
   width:1140px;
   height:75px;
   margin-top:25px;
   display:flex;
-
+  
 `
 export const EventB = styled.div`
   width:570px;
@@ -58,13 +37,14 @@ export const EventB = styled.div`
   justify-content: center;
   cursor: pointer;
 `
+
 export const Events = styled.div`
   width:1140px;
   margin-top:40px;
+  margin-bottom:120px;
   display:flex;
   justify-content:space-between;
   flex-wrap:wrap;
-  margin-bottom:120px;
 `
 export const ContentBox = styled.div`
   

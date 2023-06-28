@@ -56,6 +56,7 @@ export const EventB = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor:pointer;
 `
 export const Events = styled.div`
   width:1140px;
