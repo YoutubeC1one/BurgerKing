@@ -15,7 +15,12 @@ import EventPage1 from "./Pages/EventPages/1";
 import EventPageAll from "./Pages/EventPages/all";
 import Up from "./components/PageUp";
 import NewShop from "./Pages/EventPages/NewShop"
+import EV1 from "./Pages/EventPages/Details/1"
+import EV2 from "./Pages/EventPages/Details/2"
+import S1 from "./Pages/EventPages/DetailsShop/1"
+import EV3 from "./Pages/EventPages/Details/3"
 import { Route, Routes } from "react-router-dom";
+
 
 function App() {
   return (
@@ -36,6 +41,10 @@ function App() {
         <Route path="/event/1" element={<EventPage1 />}></Route>
         <Route path="/event/all" element={<EventPageAll />}></Route>
         <Route path="/newshop" element={<NewShop />}></Route>
+        <Route path="/eventdetail/1" element={<EV1 />}></Route>
+        <Route path="/eventdetail/2" element={<EV2 />}></Route>
+        <Route path="/eventdetail/3" element={<EV3 />}></Route>
+        <Route path="/eventdetail/shop/1" element={<S1 />}></Route>
       </Routes>
     </>
   );

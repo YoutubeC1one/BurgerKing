@@ -47,7 +47,7 @@ export const Events = styled.div`
   flex-wrap:wrap;
 `
 export const ContentBox = styled.div`
-  
+  cursor: pointer;
 `
 export const EventImage = styled.img`
 

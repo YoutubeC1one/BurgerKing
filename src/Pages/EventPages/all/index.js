@@ -1,7 +1,8 @@
 import * as S from "./style";
 import ShowMenuNav from "../../../components/ShowMenuNav";
 import { useNavigate } from "react-router-dom";
-
+import Footer from "../../../components/Footer";
+import Up from "../../../components/PageUp";
 export default function Index() {
   const navigate = useNavigate();
 
@@ -18,7 +19,7 @@ export default function Index() {
     },
     {
       key:3,
-      image:"https://d1cua0vf0mkpiy.cloudfront.net/images/event/banner/a4d65cf5-aeea-4623-ab2a-0b88a73bdf49.png",
+      image:"https://d1cua0vf0mkpiy.cloudfront.net/images/event/banner/d148a673-5db9-4b9a-9c8c-df0ab731d09d.png",
       date:"2023.06.05~2023.09.17"
     },
     {
@@ -79,8 +80,9 @@ export default function Index() {
 
   ]
   return (
+    <>
     <S.Container>
-      <ShowMenuNav/>
+      <ShowMenuNav name={"이벤트 > 전체"}/>
       <S.PageTitle>
         <S.KoreanFont style={{
           fontSize:"50px",
@@ -138,7 +140,12 @@ export default function Index() {
         }}
         
         onClick={()=>navigate("/newshop")}>
+            <S.KoreanFont style={{
+            fontSize:"30px",
+            color:"#bfbfbf"
+          }}>
             신규매장
+          </S.KoreanFont>
         </S.EventB>
       </S.PageSelect>
       <S.Events>
@@ -158,5 +165,8 @@ export default function Index() {
         ))}
       </S.Events>
     </S.Container>
+    <Up />
+    <Footer />
+    </>
   );
 }

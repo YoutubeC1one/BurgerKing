@@ -1,7 +1,8 @@
 import * as S from "./style";
 import ShowMenuNav from "../../../components/ShowMenuNav";
 import { useNavigate } from "react-router-dom";
-
+import Footer from "../../../components/Footer";
+import Up from "../../../components/PageUp";
 export default function Index() {
   const navigate = useNavigate();
 
@@ -18,7 +19,7 @@ export default function Index() {
     },
     {
       key:3,
-      image:"https://d1cua0vf0mkpiy.cloudfront.net/images/event/banner/a4d65cf5-aeea-4623-ab2a-0b88a73bdf49.png",
+      image:"https://d1cua0vf0mkpiy.cloudfront.net/images/event/banner/d148a673-5db9-4b9a-9c8c-df0ab731d09d.png",
       date:"2023.06.05~2023.09.17"
     },
     {
@@ -43,7 +44,7 @@ export default function Index() {
     },
     {
       key:8,
-      image:"https://d1cua0vf0mkpiy.cloudfront.net/images/event/banner/df2efeeb-f1f4-4435-8387-45e984b399a2.png",
+      image:"https://d1cua0vf0mkpiy.cloudfront.net/images/event/banner/892e7872-1b8a-475b-a3ad-80589a2ae527.png",
       date:"2022.11.21~"
     },
     {
@@ -54,8 +55,9 @@ export default function Index() {
 
   ]
   return (
+    <>
     <S.Container>
-      <ShowMenuNav/>
+      <ShowMenuNav name={"이벤트 > 진행중"}/>
       <S.PageTitle>
         <S.KoreanFont style={{
           fontSize:"50px",
@@ -111,12 +113,12 @@ export default function Index() {
           borderBottom:"2px solid black",
           backgroundColor:"#f2f2f2",
           
-        }}>
+        }} onClick={()=>navigate("/newshop")}>
           <S.KoreanFont style={{
             fontSize:"30px",
             color:"#bfbfbf"
           }}
-          onClick={()=>navigate("/newshop")}>
+          >
             신규매장
           </S.KoreanFont>
         </S.EventB>
@@ -124,7 +126,11 @@ export default function Index() {
       <S.Events>
         {events.map((e) => (
           <S.ContentBox key={e.key}>
-            <S.EventImage src={e.image} alt="img" />
+            <S.EventImage 
+              src={e.image} 
+              alt="img" 
+              onClick={()=>navigate(`/eventdetail/${e.key}`)}
+            />
             <S.EventDate>
               <S.KoreanFont style={{
                 fontSize:"26px",
@@ -138,5 +144,8 @@ export default function Index() {
         ))}
       </S.Events>
     </S.Container>
+    <Up />
+    <Footer />
+    </>
   );
 }

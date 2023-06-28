@@ -67,7 +67,7 @@ export const Events = styled.div`
   margin-bottom:120px;
 `
 export const ContentBox = styled.div`
-  
+  cursor: pointer;
 `
 export const EventImage = styled.img`
 

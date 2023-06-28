@@ -1,6 +1,8 @@
 import * as S from "./style";
 import ShowMenuNav from "../../../components/ShowMenuNav";
 import { useNavigate } from "react-router-dom";
+import Footer from "../../../components/Footer";
+import Up from "../../../components/PageUp";
 
 export default function Index() {
   const events=[
@@ -52,8 +54,9 @@ export default function Index() {
   ]
   const navigate = useNavigate();
   return (
+    <>
     <S.Container>
-      <ShowMenuNav/>
+      <ShowMenuNav name={"신규매장"}/>
       <S.PageTitle>
         <S.KoreanFont style={{
           fontSize:"50px",
@@ -89,7 +92,7 @@ export default function Index() {
       </S.PageSelect>
       <S.Events>
         {events.map((e) => (
-          <S.ContentBox key={e.key}>
+          <S.ContentBox key={e.key} onClick={()=>navigate(`/eventdetail/shop/${e.key}`)}>
             <S.EventImage src={e.image} alt="img" />
             <S.EventDate>
               <S.KoreanFont style={{
@@ -104,5 +107,8 @@ export default function Index() {
         ))}
       </S.Events>
     </S.Container>
+    <Up />
+    <Footer />
+    </>
   );
 }
